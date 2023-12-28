@@ -4,7 +4,7 @@
 import './App.css'
 
 import React, {useEffect, useState} from "react";
-import { animateScroll as scroll } from 'react-scroll';
+
 
 function App (){
   const [isVisible, setIsVisible] = useState(false);
