@@ -1,7 +1,8 @@
 .desktop-screen {
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
 }
@@ -12,6 +13,7 @@
   overflow: hidden;
   position: relative;
   width: 1440px;
+  
 }
 
 .desktop-screen .navbar {
@@ -22,6 +24,7 @@
   position: absolute;
   top: 0;
   width: 1440px;
+  
 }
 
 .desktop-screen .navbar-2 {
@@ -70,7 +73,6 @@
 }
 
 .desktop-screen .overlap {
-  background-image: url(./mask-group.png);
   background-size: 100% 100%;
   height: 500px;
   left: 0;
@@ -79,12 +81,63 @@
   width: 1440px;
 }
 
+.desktop-screen .box{
+  left: 0;
+  position: absolute;
+  height: 130px;
+  width: 500px;
+}
+
+.desktop-screen .text-wrapper-banner {
+  color: #303030;
+  font-family: "Inter-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 165px;
+  letter-spacing: 0;
+  line-height: normal;
+  opacity: 0.1;
+  position: absolute;
+  top: 25px;
+  white-space: nowrap;
+  width: 549px;
+  transition: opacity 1.5s ease; 
+}
+
+.desktop-screen .text-wrapper-banner.fade-in {
+  opacity: 0.8;
+}
+
+.desktop-screen .text-wrapper-banner1 {
+  color: #303030;
+  font-family: "Inter-Bold", Helvetica;
+  opacity: 0.2;
+  font-size: 40px;
+  font-weight: 700;
+  left: 165px;
+  letter-spacing: 0;
+  line-height: 60px;
+  position: absolute;
+  top: 50px;
+  width: 524px;
+  transition: opacity 1.5s ease; 
+}
+
+.desktop-screen .text-wrapper-banner1.fade-in {
+  opacity: 1;
+}
+
 .desktop-screen .button-apps-store {
   height: 64px;
   left: 405px;
   position: absolute;
   top: 330px;
   width: 216px;
+  &:active {
+    width: 238px;
+    height: 70px;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
 }
 
 .desktop-screen .button-playstore {
@@ -93,6 +146,25 @@
   position: absolute;
   top: 330px;
   width: 216px;
+  &:active {
+    width: 238px;
+    height: 70px;
+    transition: width 0.5s ease, height 0.5s ease;
+  }
+}
+
+.desktop-screen .display-dummy {
+  height: 407px;
+  left: 800px;
+  position: absolute;
+  top: 0;
+  width: 309px;
+  opacity: 0; 
+  transition: opacity 2s ease; 
+}
+
+.desktop-screen .display-dummy.fade-in {
+  opacity: 1;
 }
 
 .desktop-screen .group {
@@ -261,7 +333,8 @@
 }
 
 .desktop-screen .p {
-  color: var(--black-secondary);
+  color: black;
+  opacity:0.8;
   font-family: "Inter-Regular", Helvetica;
   font-size: 24px;
   font-weight: 400;
@@ -325,6 +398,11 @@
   height: 80px;
   position: relative;
   width: 255px;
+  transition: background-color 0.3s ease;
+  &:active {
+    background-color: #870510;
+    transition: background-color 0.3s ease;
+  }
 }
 
 .desktop-screen .text-wrapper-10 {
@@ -341,7 +419,13 @@
   top: 20px;
   white-space: nowrap;
   width: 190px;
+  &:active {
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+  }
 }
+
+
 
 .desktop-screen .group-6 {
   height: 66px;
@@ -360,7 +444,7 @@
 }
 
 .desktop-screen .syarat-ketentuan {
-  color: var(--black-2nd);
+  color: gray;
   font-family: "Inter-Regular", Helvetica;
   font-size: 16px;
   font-weight: 400;
@@ -432,7 +516,7 @@
 }
 
 .desktop-screen .text-wrapper-14 {
-  color: var(--black-2nd);
+  color: black;
   font-family: "Inter-Regular", Helvetica;
   font-size: 24px;
   font-weight: 400;
@@ -445,7 +529,7 @@
 }
 
 .desktop-screen .text-wrapper-15 {
-  color: var(--black);
+  color: black;
   font-family: "Inter-Bold", Helvetica;
   font-size: 40px;
   font-weight: 700;
@@ -466,7 +550,7 @@
 }
 
 .desktop-screen .text-wrapper-16 {
-  color: var(--black-2nd);
+  color: black;
   font-family: "Inter-Regular", Helvetica;
   font-size: 20px;
   font-weight: 400;
@@ -541,4 +625,44 @@
   position: absolute;
   top: 12px;
   width: 183px;
+}
+
+@media (max-width: 768px) {
+  .desktop-screen .navbar-2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    left: 0;
+    width: 100%;
+  }
+
+  .desktop-screen .text-wrapper,
+  .desktop-screen .text-wrapper-2 {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.group-3 {
+  opacity: 0.2;
+  transform: translateY(20px);
+  transition: all 2s ease;
+}
+
+.group-2 {
+  opacity: 0.3;
+  transform: translateY(20px);
+  transition: all 2s ease;
+}
+
+.group {
+  opacity: 0.1;
+  transform: translateY(20px);
+  transition: all 2s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0px);
 }
