@@ -1,10 +1,7 @@
-//import { useState } from 'react'
+import {useEffect, useState} from "react";
 //import reactLogo from './assets/react.svg'
 //import viteLogo from '/vite.svg'
 import './App.css'
-
-import React, {useEffect, useState} from "react";
-
 
 function App (){
   const [isVisible, setIsVisible] = useState(false);
@@ -66,19 +63,19 @@ function App (){
           <div className='box'></div>
           <p className="text-wrapper-banner">Kamu laper atau haus?</p>
           <p className="text-wrapper-banner1">Tenang... ada Hangry! yang siap mengatasi</p>
-          <img className="button-apps-store" alt="Button apps store" src="./src/assets/button-apps-store.png" />
-          <img className="button-playstore" alt="Button playstore" src="./src/assets/button-play-store.png" />
-          <img className="display-dummy" alt="Group" src="./src/assets/display2.png" />
+          <img className="button-apps-store" alt="Button apps store" src="/assets/button-apps-store.png" />
+          <img className="button-playstore" alt="Button playstore" src="/assets/button-play-store.png" />
+          <img className="display-dummy" alt="Group" src="/assets/display2.png" />
         </div>
         <div className={`group ${isVisible ? 'visible' : ''}`}>
           <div className="text-wrapper-3">Nasi Ayam · Indonesia</div>
           <div className="overlap-group">
             <div className="text-wrapper-4">arrow-right</div>
             <div className="text-wrapper-5">Bude Sari</div>
-            <img className="image" alt="Image" src="./src/assets/budesari.png" />
+            <img className="image" alt="Image" src="/assets/budesari.png" />
             <div className="image-wrapper">
-              <img className="img" alt="Image" src="./src/assets/Ellipse.png" />
-              <img className="img" alt="Image" src="./src/assets/bsicon.png" />
+              <img className="img" alt="Image" src="/assets/Ellipse.png" />
+              <img className="img" alt="Image" src="/assets/bsicon.png" />
             </div>
           </div>
         </div>
@@ -87,10 +84,10 @@ function App (){
           <div className="overlap-group">
             <div className="text-wrapper-6">arrow-right</div>
             <div className="text-wrapper-5">San Gyu</div>
-            <img className="image" alt="Image" src="./src/assets/sangyu.png" />
+            <img className="image" alt="Image" src="/assets/sangyu.png" />
             <div className="image-wrapper">
-              <img className="img" alt="Image" src="./src/assets/Ellipse.png" />
-              <img className="img" alt="Image" src="./src/assets/sgicon.png" />
+              <img className="img" alt="Image" src="/assets/Ellipse.png" />
+              <img className="img" alt="Image" src="/assets/sgicon.png" />
             </div>
           </div>
         </div>
@@ -99,10 +96,10 @@ function App (){
           <div className="overlap-group">
             <div className="text-wrapper-7">arrow-right</div>
             <div className="text-wrapper-8">Ayam Koplo</div>
-            <img className="image" alt="Image" src="./src/assets/ayam_koplo.png" />
+            <img className="image" alt="Image" src="/assets/ayam_koplo.png" />
             <div className="image-wrapper">
-            <img className="img" alt="Image" src="./src/assets/Ellipse.png" />
-            <img className="img" alt="Image" src="./src/assets/akicon.png" />
+            <img className="img" alt="Image" src="/assets/Ellipse.png" />
+            <img className="img" alt="Image" src="/assets/akicon.png" />
             </div>
           </div>
         </div>
@@ -111,7 +108,7 @@ function App (){
           <p className="text-wrapper-9">Hangry! adalah restoran dengan beragam brand</p>
         </div>
         <div className="bulk-order">
-          <img className="image-4" alt="Image" src="./src/assets/bulk.png" />
+          <img className="image-4" alt="Image" src="/assets/bulk.png" />
           <div className="group-5">
             <div className="overlap-group-wrapper">
               <div className="div-wrapper">
@@ -123,15 +120,15 @@ function App (){
                 <div className="syarat-ketentuan">*Syarat &amp; ketentuan berlaku</div>
                 <div className="text-wrapper-11">Gratis biaya kirim</div>
               </div>
-              <img className="check" alt="Image" src="./src/assets/check.png" />
+              <img className="check" alt="Image" src="/assets/check.png" />
             </div>
             <div className="group-8">
               <div className="text-wrapper-13">Semua menu diskon 20%</div>
-              <img className="check" alt="Image" src="./src/assets/check.png" />
+              <img className="check" alt="Image" src="/assets/check.png" />
             </div>
             <div className="group-9">
               <div className="text-wrapper-13">Beragam pilihan menu</div>
-              <img className="check" alt="Image" src="./src/assets/check.png" />
+              <img className="check" alt="Image" src="/assets/check.png" />
             </div>
             <p className="text-wrapper-14">
               Nikmati keuntungan dengan minimum pembelian 20 porsi menu apa aja. Cocok untuk hidangan segala acara!
@@ -142,21 +139,21 @@ function App (){
         <div className="find-us">
           <p className="text-wrapper-16">Hangry! dapat kamu temukan di</p>
           <div className="eats-wrapper">
-            <img className="eats" alt="Eats" src="./src/assets/Eats.png" />
+            <img className="eats" alt="Eats" src="/assets/Eats.png" />
           </div>
           <div className="zomato-wrapper">
-            <img className="zomato" alt="Zomato" src="./src/assets/zomato.png" />
+            <img className="zomato" alt="Zomato" src="/assets/zomato.png" />
           </div>
           <div className="grab-food-wrapper">
-            <img className="grab-food" alt="Grab food" src="./src/assets/grab.png" />
+            <img className="grab-food" alt="Grab food" src="/assets/grab.png" />
           </div>
           <div className="go-food-wrapper">
-            <img className="go-food" alt="Go food" src="./src/assets/gofood.png" />
+            <img className="go-food" alt="Go food" src="/assets/gofood.png" />
           </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default App;
